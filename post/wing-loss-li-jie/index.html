@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Wing loss 理解 | Gridea</title>
-<link rel="shortcut icon" href="https://lakerwe.github.io/favicon.ico?v=1598567942162">
+<link rel="shortcut icon" href="https://lakerwe.github.io/favicon.ico?v=1598571519770">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://lakerwe.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Wing loss 理解 | Gridea - Atom Feed" href="https://lakerwe.github.io/atom.xml">
@@ -25,7 +25,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://lakerwe.github.io">
-  <img class="avatar" src="https://lakerwe.github.io/images/avatar.png?v=1598567942162" alt="">
+  <img class="avatar" src="https://lakerwe.github.io/images/avatar.png?v=1598571519770" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -109,7 +109,8 @@
 <li>
 <p>不理解的地方;</p>
 <blockquote>
-<p>we provide an intuitive analysis of the properties of the L1 and L2 loss functions . The magnitude of the gradients of these two functions is 1 and jxj respectively, and the magnitude of the corresponding optimal step sizes should be |x| and 1.</p>
+<p>we provide an intuitive analysis of the properties of the L1 and L2 loss functions . The magnitude of the gradients of these two functions is 1 and |x| respectively, and the magnitude of the corresponding optimal step sizes should be |x| and 1.<br>
+个人理解：首先假设lr都为1，对于L1，当前error = x , gradient=1，则消除当前error需要的次数为x/(1X1)=x; 对于L2，当前error = x, gradient = x,则消除当前error需要的次数为x/(x X 1)=1.</p>
 </blockquote>
 </li>
 </ol>
