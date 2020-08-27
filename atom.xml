@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://lakerwe.github.io</id>
+    <title>Gridea</title>
+    <updated>2020-08-27T22:36:17.762Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://lakerwe.github.io"/>
+    <link rel="self" href="https://lakerwe.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://lakerwe.github.io/images/avatar.png</logo>
+    <icon>https://lakerwe.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Wing loss 理解]]></title>
+        <id>https://lakerwe.github.io/post/wing-loss-li-jie/</id>
+        <link href="https://lakerwe.github.io/post/wing-loss-li-jie/">
+        </link>
+        <updated>2020-08-27T22:35:21.000Z</updated>
+        <content type="html"><![CDATA[<p>论文：wing loss for robust facial landmark localisation with convolutional neural networks</p>
+<h1 id="分析l1l2-loss-部分">分析L1,L2 loss 部分</h1>
+<ol>
+<li>
+<p>显而易见的是，L1 loss对小error不友好，因为gradient固定，小error情况下参数已经接近最优解，此时需要小的step；L2 loss对离群点鲁棒性差，L2的导数是线性函数，离群点的error值肯定大，则该离群点的gradient会很大，使参数的更新方向被该离群点主导。L1 smooth结合了两者优点。</p>
+</li>
+<li>
+<p>wing loss对L1,L2的分析提到：</p>
+<blockquote>
+<p>In both cases the update towards the solution will be dominated by larger errors. In the case of L1, the magnitude of the gradient is the same for all the points, but the step size is disproportionately influenced by larger errors. For L2, the step size is the same but the gradient will be dominated by large errors.</p>
+</blockquote>
+<p>个人理解是：对于error大的点和error小的点，L1的gradient都为1，同时在lr相同的情况下， 对于小error的点：自身需要更新的step值/实际更新的step值, 较小；对于大error的点：自身需要更新的step值/实际更新的step值，较大。两者的更新比例不匹配。<br>
+对于L2，线性的一阶导在lr一定的情况下使得，小error可以得到合理的参数更新幅度，但是整体的更新方向被大error主导。</p>
+</li>
+<li>
+<p>不理解的地方;</p>
+<blockquote>
+<p>we provide an intuitive analysis of the properties of the L1 and L2 loss functions . The magnitude of the gradients of these two functions is 1 and jxj respectively, and the magnitude of the corresponding optimal step sizes should be |x| and 1.</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://lakerwe.github.io/post/hello-gridea/</id>
+        <link href="https://lakerwe.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
